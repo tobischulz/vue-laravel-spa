@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import store from '@/js/stores'
 import NotFound from '@/js/pages/NotFound'
 import Guest from '@/js/layouts/Guest'
+import Register from '@/js/pages/auth/Register'
 import Login from '@/js/pages/auth/Login'
 import ForgotPassword from '@/js/pages/auth/ForgotPassword'
 import ResetPassword from '@/js/pages/auth/ResetPassword'
@@ -26,6 +27,7 @@ const router = createRouter({
             component: Guest,
             meta: { isGuest: true },
             children: [
+                { path: "/register", name: 'Register', component: Register },
                 { path: "/login", name: 'Login', component: Login },
                 { path: "/forgot-password", name: 'ForgotPassword', component: ForgotPassword },
                 { path: "/reset-password/:token", name: 'ResetPassword', component: ResetPassword }
