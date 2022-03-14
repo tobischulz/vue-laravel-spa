@@ -76,7 +76,6 @@ export default {
             axios.get('/sanctum/csrf-cookie').then(response => {
                 axios.post('/register', this.data)
                     .then((response) => {
-                        console.log(response)
                         store.dispatch('attempt_user')
                             .then(() => {
                                 router.push({name: 'Home'})
@@ -84,7 +83,6 @@ export default {
                     })
                     .catch((error) => {
                         this.errors = error.response.data.errors
-                        console.error(error)
                     })
             });
         }
