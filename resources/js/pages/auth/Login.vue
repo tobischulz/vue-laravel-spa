@@ -37,6 +37,12 @@
             </div>
         </form>
     </div>
+    <div class="text-center text-sm mt-4">
+        Don't have an account yet?
+        <router-link class="underline text-gray-500 hover:text-gray-200" :to="{name: 'Register'}">
+            Sign up now
+        </router-link>
+    </div>
 </div>
 </template>
 
