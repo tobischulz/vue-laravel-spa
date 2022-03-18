@@ -9,6 +9,7 @@ import ResetPassword from '@/js/pages/auth/ResetPassword'
 
 import Authenticated from '@/js/layouts/Authenticated'
 import Home from '@/js/pages/Home'
+import Blog from '@/js/pages/Blog'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -19,6 +20,7 @@ const router = createRouter({
             meta: { requiresAuth: true },
             children: [
                 { path: "/", name: 'Home', component: Home },
+                { path: "/blog", name: 'Blog', component: Blog },
             ]
         },
         {

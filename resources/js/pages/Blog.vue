@@ -1,6 +1,6 @@
 <template>
   <div>
-    This is the homepage!
+    This is my blog! Check out my awesome blogposts.
   </div>
 </template>
 

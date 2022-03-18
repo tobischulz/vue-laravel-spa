@@ -10,10 +10,15 @@
         </div>
         <ul class="list flex items-center text-gray-800 font-semibold">
             <li>
-                <a href="#" class="hover:text-white hover:bg-gray-800 p-2 rounded flex items-center space-x-2">
+                <router-link :to="{name: 'Home'}" class="hover:text-white hover:bg-gray-800 p-2 rounded flex items-center space-x-2">
                     <HomeIcon class="w-6 h-6"/>
                     <span>Home</span>
-                </a>
+                </router-link>
+            </li>
+            <li>
+                <router-link :to="{name: 'Blog'}" class="hover:text-white hover:bg-gray-800 p-2 rounded flex items-center space-x-2">
+                    Blog
+                </router-link>
             </li>
             <li>
                 <button class="hover:text-white hover:bg-gray-800 p-2 rounded flex items-center space-x-2 font-semibold">
