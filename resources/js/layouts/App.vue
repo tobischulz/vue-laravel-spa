@@ -8,15 +8,14 @@ import router from '@/js/router'
 
 export default {
     mounted() {
-        axios.interceptors.response.use(response => {
-            return response
-        }, error => {
-             if (error.response.status === 401 || error.response.status === 419) {
+        axios.interceptors.response.use(function (response) {
+            return response;
+        }, function (error) {
+            if (error.response.status === 401 || error.response.status === 419) {
                 router.push({name: 'Login'})
-            } else if (error.response.status === 404) {
-                router.push({name: 'NotFound'})
             }
-            throw error;
+
+            return Promise.reject(error);
         });
     },
 }

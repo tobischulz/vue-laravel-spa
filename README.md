@@ -4,7 +4,7 @@
 
 ## Laravel Sanctum Fortify Vue SPA
 
-A very simple and clean SPA boilerplate to star a new SPA project with authentication and API. This boilerplate uses the following tools:
+A very simple and clean SPA boilerplate to start a new SPA project with authentication and API. This boilerplate uses the following tools:
 
 - [Laravel 9.x](https://github.com/laravel/laravel)
 - [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum)
