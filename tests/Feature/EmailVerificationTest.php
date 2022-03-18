@@ -8,6 +8,7 @@ use Illuminate\Auth\Events\Verified;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\URL;
+use Laravel\Fortify\Features;
 use Tests\TestCase;
 
 class EmailVerificationTest extends TestCase
@@ -16,6 +17,10 @@ class EmailVerificationTest extends TestCase
 
     public function test_email_can_be_verified()
     {
+        if (!in_array(Features::emailVerification(), config('fortify.features'))) {
+            $this->markTestSkipped('Skip test cause feature is disabled.');
+        }
+
         $user = User::factory()->create([
             'email_verified_at' => null,
         ]);
@@ -39,6 +44,10 @@ class EmailVerificationTest extends TestCase
 
     public function test_email_is_not_verified_with_invalid_hash()
     {
+        if (!in_array(Features::emailVerification(), config('fortify.features'))) {
+            $this->markTestSkipped('Skip test cause feature is disabled.');
+        }
+
         $user = User::factory()->create([
             'email_verified_at' => null,
         ]);
