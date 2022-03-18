@@ -1,0 +1,20 @@
+version: 1
+
+environment:
+  php: 8.1
+  node: 16
+
+pipeline:
+  - name: Setup
+    cmd: |
+      cp -v .env.example .env
+      composer install --no-interaction --prefer-dist --optimize-autoloader
+      php artisan key:generate
+
+  - name: Compile Dev Assets
+    cmd: |
+      yarn
+      yarn run dev
+
+  - name: Run Tests
+    cmd: phpunit
