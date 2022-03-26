@@ -21,6 +21,9 @@
                 </label>
                 <input v-model="data.password" class="p-2 rounded-md shadow-sm bg-white border-gray-900 text-gray-400 focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50 block mt-1 w-full" id="password" type="password" name="password" required="required" autocomplete="current-password">
             </div>
+            <div v-if="errors" class="text-red-500 py-2 font-semibold">
+                <span>{{ errors.message }}</span>
+            </div>
             <div class="block mt-4">
                 <label for="remember" class="inline-flex items-center">
                     <input v-model="data.remember" id="remember" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
@@ -57,7 +60,8 @@ export default {
                 email: null,
                 password: null,
                 remember: null,
-            }
+            },
+            errors: null
         }
     },
     methods: {
@@ -71,7 +75,7 @@ export default {
                             })
                     })
                     .catch((error) => {
-                        console.error(error)
+                        this.errors = error.response.data
                     })
             });
         }
