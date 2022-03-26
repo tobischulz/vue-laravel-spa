@@ -2,15 +2,15 @@
 
 ![Build Status](https://app.chipperci.com/projects/6fad1690-acea-4dbd-b83c-20d34e4b8737/status/main)
 
-## Laravel Sanctum Fortify Vue SPA
+## Laravel Fortify Vue SPA
 
-A very simple and clean SPA boilerplate to start a new SPA project with authentication and API. This boilerplate uses the following tools:
+A simple and clean boilerplate to start a new SPA project with authentication and more features from fortify. This boilerplate uses the following tools:
 
 - [Laravel 9.x](https://github.com/laravel/laravel)
 - [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum)
 - [Laravel Fortify](https://laravel.com/docs/9.x/fortify)
 - [Vue 3](https://github.com/vuejs/vue)
-- [Vue-Router](https://router.vuejs.org/)
+- [Vue Router](https://router.vuejs.org/)
 - [Vuex](https://vuex.vuejs.org/)
 - [Tailwindcss 3.x](https://tailwindcss.com/)
 

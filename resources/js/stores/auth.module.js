@@ -9,7 +9,7 @@ export const actions = {
     ['attempt_user'](context, user) {
        return axios.get('/api/v1/me')
             .then((response) => {
-                context.commit('updateUser', response.data);
+                context.commit('updateUser', response.data.data);
             })
             .catch((error) => {
                 context.commit('updateUser', null);

@@ -4,12 +4,13 @@ import NotFound from '@/js/pages/NotFound'
 import Guest from '@/js/layouts/Guest'
 import Register from '@/js/pages/auth/Register'
 import Login from '@/js/pages/auth/Login'
+import TwoFactorChallenge from '@/js/pages/auth/TwoFactorChallenge'
 import ForgotPassword from '@/js/pages/auth/ForgotPassword'
 import ResetPassword from '@/js/pages/auth/ResetPassword'
 
 import Authenticated from '@/js/layouts/Authenticated'
 import Home from '@/js/pages/Home'
-import Blog from '@/js/pages/Blog'
+import User from '@/js/pages/User'
 
 const router = createRouter({
     history: createWebHistory(),
@@ -20,7 +21,7 @@ const router = createRouter({
             meta: { requiresAuth: true },
             children: [
                 { path: "/", name: 'Home', component: Home },
-                { path: "/blog", name: 'Blog', component: Blog },
+                { path: "/user", name: 'User', component: User },
             ]
         },
         {
@@ -31,6 +32,7 @@ const router = createRouter({
             children: [
                 { path: "/register", name: 'Register', component: Register },
                 { path: "/login", name: 'Login', component: Login },
+                { path: "/two-factor-challenge", name: 'TwoFactorChallenge', component: TwoFactorChallenge },
                 { path: "/forgot-password", name: 'ForgotPassword', component: ForgotPassword },
                 { path: "/reset-password/:token", name: 'ResetPassword', component: ResetPassword }
             ]

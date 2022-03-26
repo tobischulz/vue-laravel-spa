@@ -49,9 +49,11 @@ class AuthenticationTest extends TestCase
         $response = $this->getJson('/api/v1/me');
 
         $response->assertJson([
-            'id' => $user->id,
-            'email' => $user->email,
-            'name' => $user->name,
+            'data' => [
+                'id' => $user->id,
+                'email' => $user->email,
+                'name' => $user->name,
+            ]
         ]);
     }
 }

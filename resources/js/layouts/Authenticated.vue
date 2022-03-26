@@ -1,27 +1,28 @@
 <template>
-    <main>
-        <div class="container mx-auto">
-            <navigation></navigation>
-            <router-view></router-view>
-            <div class="text-sm text-gray-800 py-8">
-                Laravel, Sanctum, Fortify, Tailwindcss, Vue3, Vuex, Vue-Router.
-            </div>
-        </div>
-    </main>
+  <main>
+    <navigation></navigation>
+    <div class="container mx-auto">
+      <router-view></router-view>
+      <div class="flex text-xs text-gray-500 py-8">
+        SPA build with <HeartIcon class="h-4 w-4 text-red-500"/> and Laravel, Sanctum, Fortify, Tailwindcss, Vue3, Vuex, Vue-Router.
+      </div>
+    </div>
+  </main>
 </template>
 
 <script>
 import Navigation from '@/js/components/Navigation'
-import store from '@/js/stores'
+import { HeartIcon } from '@heroicons/vue/solid'
 
 export default {
-    components: { 
-        Navigation,
-    },
-    computed: {
-        user() {
-            return store.getters.user
-        }
-    },
+  components: {
+    Navigation,
+    HeartIcon,
+  },
+  computed: {
+    user() {
+      return this.$store.getters.user
+    }
+  },
 }
 </script>
