@@ -72,8 +72,10 @@ export default {
             }
 
             this.$store.dispatch('attempt_user')
-              .then(() => {
-                this.$router.replace({name: 'Home'})
+              .then((response) => {
+                if(response && response?.status === 200) {
+                  this.$router.replace({name: 'Home'})
+                }
               })
           })
           .catch((error) => {

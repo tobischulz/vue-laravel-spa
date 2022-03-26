@@ -14,6 +14,17 @@ A simple and clean boilerplate to start a new SPA project with authentication an
 - [Vuex](https://vuex.vuejs.org/)
 - [Tailwindcss 3.x](https://tailwindcss.com/)
 
+## Features
+
+The following features are implemented in Vue SPA from Sanctum and Fortify:
+
+- ✅ Login
+- ✅ Passwort reset
+- ✅ Register
+- ✅ Confirm password challenge
+- ✅ Two-Factor-Authentication with confirmation
+- ✅ E-Mail verification
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).

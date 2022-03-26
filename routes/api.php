@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('v1')
     ->namespace('\App\Http\Controllers\Api\V1')
-    ->middleware('auth:sanctum')
+    ->middleware(['auth:sanctum', 'verified'])
     ->group(function () {
         Route::get('/me', User\MeController::class);
     });

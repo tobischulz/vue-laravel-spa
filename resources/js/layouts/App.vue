@@ -12,6 +12,8 @@ export default {
     }, function (error) {
       if (error.response.status === 401 || error.response.status === 419) {
         router.push({name: 'Login'})
+      } else if(error.response.status === 403) {
+        router.push({name: 'VerifyEmail'})
       } else if(error.response.status === 423) {
         router.push({name: 'ConfirmPassword'})
       }

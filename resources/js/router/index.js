@@ -7,6 +7,7 @@ import Login from '@/js/pages/auth/Login'
 import TwoFactorChallenge from '@/js/pages/auth/TwoFactorChallenge'
 import ForgotPassword from '@/js/pages/auth/ForgotPassword'
 import ResetPassword from '@/js/pages/auth/ResetPassword'
+import VerifyEmail from '@/js/pages/auth/VerifyEmail'
 
 import Authenticated from '@/js/layouts/Authenticated'
 import ConfirmPassword from '@/js/pages/auth/ConfirmPassword'
@@ -34,6 +35,7 @@ const router = createRouter({
             children: [
                 { path: "/register", name: 'Register', component: Register },
                 { path: "/login", name: 'Login', component: Login },
+                { path: "/verify-email", name: 'VerifyEmail', component: VerifyEmail },
                 { path: "/two-factor-challenge", name: 'TwoFactorChallenge', component: TwoFactorChallenge },
                 { path: "/forgot-password", name: 'ForgotPassword', component: ForgotPassword },
                 { path: "/reset-password/:token", name: 'ResetPassword', component: ResetPassword }
