@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Notification;
+use Laravel\Fortify\Features;
 use Tests\TestCase;
 
 class PasswordResetTest extends TestCase
@@ -14,6 +15,10 @@ class PasswordResetTest extends TestCase
 
     public function test_reset_password_link_can_be_requested()
     {
+        if (!in_array(Features::resetPasswords(), config('fortify.features'))) {
+            $this->markTestSkipped('Skip test cause feature is disabled.');
+        }
+
         Notification::fake();
 
         $user = User::factory()->create();
@@ -25,6 +30,10 @@ class PasswordResetTest extends TestCase
 
     public function test_password_can_be_reset_with_valid_token()
     {
+        if (!in_array(Features::resetPasswords(), config('fortify.features'))) {
+            $this->markTestSkipped('Skip test cause feature is disabled.');
+        }
+
         Notification::fake();
 
         $user = User::factory()->create();

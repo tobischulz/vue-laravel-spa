@@ -9,6 +9,7 @@ import ForgotPassword from '@/js/pages/auth/ForgotPassword'
 import ResetPassword from '@/js/pages/auth/ResetPassword'
 
 import Authenticated from '@/js/layouts/Authenticated'
+import ConfirmPassword from '@/js/pages/auth/ConfirmPassword'
 import Home from '@/js/pages/Home'
 import User from '@/js/pages/User'
 
@@ -22,6 +23,7 @@ const router = createRouter({
             children: [
                 { path: "/", name: 'Home', component: Home },
                 { path: "/user", name: 'User', component: User },
+                { path: "/confirm-password", name: 'ConfirmPassword', component: ConfirmPassword },
             ]
         },
         {

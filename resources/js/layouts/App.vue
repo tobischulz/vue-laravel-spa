@@ -3,13 +3,17 @@
 </template>
 
 <script>
+import router from '@/js/router'
+
 export default {
   mounted() {
     axios.interceptors.response.use(function (response) {
       return response;
     }, function (error) {
       if (error.response.status === 401 || error.response.status === 419) {
-        this.$router.push({name: 'Login'})
+        router.push({name: 'Login'})
+      } else if(error.response.status === 423) {
+        router.push({name: 'ConfirmPassword'})
       }
 
       return Promise.reject(error);
