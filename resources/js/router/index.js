@@ -48,6 +48,8 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
     if(to.meta.requiresAuth && !store.getters.user) {
         next({name: "Login"})
+    } else if(to.meta.isGuest && store.getters.user) {
+        next({name: "Home"})
     } else {
         next();
     }

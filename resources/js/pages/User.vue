@@ -36,12 +36,6 @@
 import TwoFactoreAuthentication from '@/js/components/user/TwoFactoreAuthentication'
 
 export default {
-  data() {
-    return {
-      backupCodes: [],
-      qrCode: null,
-    }
-  },
   components: {
     TwoFactoreAuthentication,
   }
