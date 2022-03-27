@@ -1,6 +1,6 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-![Build Status](https://app.chipperci.com/projects/6fad1690-acea-4dbd-b83c-20d34e4b8737/status/main)
+![Build Status](https://app.chipperci.com/projects/6fad1690-acea-4dbd-b83c-20d34e4b8737/status/master)
 
 ## Laravel Fortify Vue SPA
 
