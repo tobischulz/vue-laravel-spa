@@ -17,7 +17,7 @@
         Ensure your account is using a long, random password to stay secure.
       </p>
     </div>
-    <div class="md:w-2/3 p-4 bg-white shadow-md rounded-lg">wip</div>
+    <password-update class="md:w-2/3 p-4 bg-white shadow-md rounded-lg"></password-update>
   </div>
 
   <div class="md:flex md:justify-between md:space-x-2 py-6">
@@ -35,11 +35,13 @@
 <script>
 import TwoFactoreAuthentication from '@/js/components/user/TwoFactoreAuthentication'
 import ProfileUpdate from '@/js/components/user/ProfileUpdate'
+import PasswordUpdate from '@/js/components/user/PasswordUpdate'
 
 export default {
   components: {
     TwoFactoreAuthentication,
     ProfileUpdate,
+    PasswordUpdate,
   }
 }
 </script>

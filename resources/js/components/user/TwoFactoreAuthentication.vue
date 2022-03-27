@@ -56,7 +56,7 @@ export default {
       return this.$store.getters.user
     },
     active() {
-      return this.user.two_factor
+      return this.user?.two_factor
     }
   },
   methods: {
@@ -68,7 +68,9 @@ export default {
               this.loadQrCode()
             })
         })
-        .catch((error) => {})
+        .catch((error) => {
+          this.errors = error.response.data
+        })
     },
     twoFactorChallenge() {
        axios.post('/user/confirmed-two-factor-authentication', { code: this.code })
@@ -84,14 +86,18 @@ export default {
         .then((response) => {
           this.qrCode = response.data
         })
-        .catch((error) => {})
+        .catch((error) => {
+          this.errors = error.response.data
+        })
     },
     loadRecoveryCodes() {
       axios.get('/user/two-factor-recovery-codes')
         .then((response) => {
           this.recoveryCodes = response.data
         })
-        .catch((error) => {})
+        .catch((error) => {
+          this.errors = error.response.data
+        })
     },
     resetRecoveryCodes() {
       axios.post('/user/two-factor-recovery-codes')
@@ -100,7 +106,9 @@ export default {
             this.loadRecoveryCodes()
           }
         })
-        .catch((error) => {})
+        .catch((error) => {
+          this.errors = error.response.data
+        })
     },
     deactivate() {
       const confirmed = confirm('Are you sure you want to deactivate Two Factor Authentication?')
@@ -110,7 +118,9 @@ export default {
         .then((response) => {
           this.$store.dispatch('attempt_user')
         })
-        .catch((error) => {})
+        .catch((error) => {
+          this.errors = error.response.data
+        })
     },
   }
 }

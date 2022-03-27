@@ -4,13 +4,13 @@
       <label class="block font-medium text-sm text-gray-500" for="name">
         Name
       </label>
-      <input v-model="data.name" class="p-2 rounded-md shadow-sm bg-white border border-gray-300 text-gray-400 block mt-1 w-full" type="text" id="name" name="name" required="required" autofocus="autofocus">
+      <input v-model="data.name" class="p-2 rounded-md shadow-sm bg-white border border-gray-300 text-gray-400 block mt-1 w-full" type="text" id="name" name="name" required="required">
     </div>
     <div>
       <label class="block font-medium text-sm text-gray-500" for="email">
         Email
       </label>
-      <input v-model="data.email" class="p-2 rounded-md shadow-sm bg-white border border-gray-300 text-gray-400 block mt-1 w-full" type="email" id="email" name="email" required="required" autofocus="autofocus">
+      <input v-model="data.email" class="p-2 rounded-md shadow-sm bg-white border border-gray-300 text-gray-400 block mt-1 w-full" type="email" id="email" name="email" required="required">
     </div>
     <div v-if="errors" class="text-red-500 py-2 font-semibold">
       <span>{{ errors.message }}</span>
