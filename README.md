@@ -6,7 +6,7 @@
 
 ## Laravel Fortify Vue SPA
 
-A simple and clean boilerplate to start a new SPA project with authentication and more features from fortify. This boilerplate uses the following tools:
+A simple and clean boilerplate to start a new SPA project with authentication and more features from fortify. Its like the little sister of Jetstream, but as SPA. This boilerplate uses the following tools:
 
 - [Laravel 9.x](https://github.com/laravel/laravel)
 - [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum)
@@ -18,16 +18,19 @@ A simple and clean boilerplate to start a new SPA project with authentication an
 
 ## Features
 
-The following features are implemented in Vue SPA from Sanctum and Fortify:
+The following Sanctum and Fortify features are implemented in this Vue SPA:
 
 - ✅ Login
-- ✅ Passwort reset
-- ✅ Register
-- ✅ Confirm password challenge
-- ✅ Two-Factor-Authentication with confirmation
-- ✅ E-Mail verification
+- ✅ Passwort Reset
+- ✅ Registration
+- ✅ Profile Management
+- ✅ Password Confirmation
+- ✅ Two Factor Authentication with Confirmation
+- ✅ E-Mail Verification
 
 ## Screenshots
+
+A Picture Is Worth More Than A Thousand Words.
 
 ![art/screenshot-login.jpg](art/screenshot-login.jpg)
 
