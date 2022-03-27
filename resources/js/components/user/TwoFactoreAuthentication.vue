@@ -28,14 +28,15 @@
       </form>
     </div>
 
-    <div v-if="active && backupCodes" class="grid gap-1 max-w-xl mt-4 p-4 font-mono text-sm bg-gray-100 rounded-lg">
-      <div v-for="backupCode in backupCodes" :key="backupCode">{{ backupCode }}</div>
+    <div v-if="active && recoveryCodes" class="grid gap-1 max-w-xl mt-4 p-4 font-mono text-sm bg-gray-100 rounded-lg">
+      <div v-for="backupCode in recoveryCodes" :key="backupCode">{{ backupCode }}</div>
     </div>
 
     <div class="space-x-2 mt-3">
-      <button v-if="!active && !qrCode" @click="activate" class="bg-gray-800 text-white p-2 rounded">Activate</button>
-      <button v-if="active" @click="loadBackupCodes" class="bg-gray-800 text-white p-2 rounded">Show Backup-Codes</button>
-      <button v-if="active" @click="deactivate" class="bg-red-500 text-white p-2 rounded">Deactivate</button>
+      <button v-if="!active && !qrCode" @click="activate" class="inline-flex items-center px-4 py-2 bg-gray-900 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">Activate</button>
+      <button v-if="active && !recoveryCodes" @click="loadRecoveryCodes" class="inline-flex items-center px-4 py-2 bg-gray-900 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">Show Recovery-Codes</button>
+      <button v-if="active && recoveryCodes" @click="resetRecoveryCodes" class="inline-flex items-center px-4 py-2 bg-transparent border border-gray-600 rounded-md font-semibold text-xs text-gray-500 uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">Reset Recovery-Codes</button>
+      <button v-if="active" @click="deactivate" class="inline-flex items-center px-4 py-2 bg-red-500 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-red-700 active:bg-red-900 focus:outline-none focus:border-red-900 focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">Deactivate</button>
     </div>
   </div>
 </template>
@@ -44,7 +45,7 @@
 export default {
   data() {
     return {
-      backupCodes: null,
+      recoveryCodes: null,
       qrCode: null,
       errors: null,
       code: null,
@@ -85,14 +86,26 @@ export default {
         })
         .catch((error) => {})
     },
-    loadBackupCodes() {
+    loadRecoveryCodes() {
       axios.get('/user/two-factor-recovery-codes')
         .then((response) => {
-          this.backupCodes = response.data
+          this.recoveryCodes = response.data
+        })
+        .catch((error) => {})
+    },
+    resetRecoveryCodes() {
+      axios.post('/user/two-factor-recovery-codes')
+        .then((response) => {
+          if(response.status === 200) {
+            this.loadRecoveryCodes()
+          }
         })
         .catch((error) => {})
     },
     deactivate() {
+      const confirmed = confirm('Are you sure you want to deactivate Two Factor Authentication?')
+      if(!confirmed) return
+
       axios.delete('/user/two-factor-authentication')
         .then((response) => {
           this.$store.dispatch('attempt_user')
