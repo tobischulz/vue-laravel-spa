@@ -50,12 +50,12 @@ import Logo from '@/js/components/Logo'
 export default {
   data: () => {
     return {
+      errors: null,
       data: {
         email: null,
         password: null,
         remember: null,
       },
-      errors: null
     }
   },
   components: {
@@ -63,17 +63,18 @@ export default {
   },
   methods: {
     login() {
+      this.errors = null
       axios.get('/sanctum/csrf-cookie').then(response => {
         axios.post('/login', this.data)
           .then((response) => {
-            if(response.data.two_factor) {
+            if(response?.status === 200 && response.data?.two_factor) {
               this.$router.replace({name: 'TwoFactorChallenge'})
               return;
             }
 
             this.$store.dispatch('attempt_user')
               .then((response) => {
-                if(response && response?.status === 200) {
+                if(response?.status === 200) {
                   this.$router.replace({name: 'Home'})
                 }
               })

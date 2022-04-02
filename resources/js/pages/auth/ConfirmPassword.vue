@@ -33,6 +33,7 @@ export default {
   },
   methods: {
     confirm() {
+      this.errors = null
       axios.post('/user/confirm-password', {password: this.password})
         .then((response) => {
           this.$router.back()

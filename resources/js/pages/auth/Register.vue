@@ -70,6 +70,7 @@ export default {
   },
   methods: {
     register() {
+      this.errors = null
       axios.get('/sanctum/csrf-cookie').then(response => {
         axios.post('/register', this.data)
           .then((response) => {

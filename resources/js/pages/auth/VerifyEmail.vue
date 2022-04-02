@@ -28,6 +28,7 @@ export default {
   },
   methods: {
     resendVerification() {
+      this.errors = null
       axios.post('/email/verification-notification')
         .then((response) => {
           console.log(response)

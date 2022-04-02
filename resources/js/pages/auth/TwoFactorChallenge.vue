@@ -38,6 +38,7 @@ export default {
   },
   methods: {
     login() {
+      this.errors = null
       axios.post('/two-factor-challenge', {code: this.code, recovery_code: this.code})
         .then((response) => {
           if(response.status !== 204) return

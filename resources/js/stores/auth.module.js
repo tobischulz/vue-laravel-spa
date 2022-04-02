@@ -6,13 +6,15 @@ export const actions = {
     ['set_user'](context, user) {
         context.commit('updateUser', user);
     },
-    ['attempt_user'](context, user) {
+    ['attempt_user'](context) {
        return axios.get('/api/v1/me')
             .then((response) => {
-                context.commit('updateUser', response.data.data);
+                context.commit('updateUser', response.data.data)
+                return response
             })
             .catch((error) => {
                 context.commit('updateUser', null);
+                return error
             })
     },
     ['logout'](context) {
