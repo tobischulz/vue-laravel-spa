@@ -8,7 +8,10 @@
     </p>
 
     <div v-if="qrCode && !active" class="max-w-lg flex py-4">
-      <div v-if="qrCode" v-html="qrCode.svg" class="pr-4"></div>
+      <div>
+        <div v-if="qrCode" v-html="qrCode.svg" class="pr-4"></div>
+        <div v-if="setupKey" class="text-gray-600 text-sm">Setup Key: <span class="text-base">{{ setupKey }}</span></div>
+      </div>
       <form @submit.prevent="twoFactorChallenge">
         <p class="text-sm text-gray-600 pb-4">
           To activate Two-Factor-Authentication scan the QR-Code and enter your first TOTP-Code here.
@@ -47,6 +50,7 @@ export default {
     return {
       recoveryCodes: null,
       qrCode: null,
+      setupKey: null,
       errors: null,
       code: null,
     }
@@ -66,6 +70,7 @@ export default {
           this.$store.dispatch('attempt_user')
             .then(() => {
               this.loadQrCode()
+              this.loadSetupKey()
             })
         })
         .catch((error) => {
@@ -85,6 +90,15 @@ export default {
       axios.get('/user/two-factor-qr-code')
         .then((response) => {
           this.qrCode = response.data
+        })
+        .catch((error) => {
+          this.errors = error.response.data
+        })
+    },
+    loadSetupKey() {
+      axios.get('/user/two-factor-secret-key')
+        .then((response) => {
+          this.setupKey = response.data.secretKey
         })
         .catch((error) => {
           this.errors = error.response.data
