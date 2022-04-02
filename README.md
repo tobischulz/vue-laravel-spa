@@ -38,6 +38,8 @@ A Picture Is Worth More Than A Thousand Words.
 
 ![art/screenshot-user-settings.jpg](art/screenshot-user-settings.jpg)
 
+![art/screenshot-2fa-activation.jpg](art/screenshot-2fa-activation.jpg)
+
 ![art/screenshot-confirm-password.jpg](art/screenshot-confirm-password.jpg)
 ## Contributing
 
