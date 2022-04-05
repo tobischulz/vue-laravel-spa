@@ -42,6 +42,14 @@ A Picture Is Worth More Than A Thousand Words.
 
 ![art/screenshot-confirm-password.jpg](art/screenshot-confirm-password.jpg)
 
+## Testing
+
+PHPunit is ready setup to test the API side of this boilerplate. Tested are all Sanctum and Fortify features cause there are heavily based on there original tests. Thats a good starting point to add tests for your next project. To run the tests you can call phpunit like this:
+
+```bash
+php artisan test
+```
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
