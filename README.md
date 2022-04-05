@@ -41,6 +41,7 @@ A Picture Is Worth More Than A Thousand Words.
 ![art/screenshot-2fa-activation.jpg](art/screenshot-2fa-activation.jpg)
 
 ![art/screenshot-confirm-password.jpg](art/screenshot-confirm-password.jpg)
+
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
