@@ -1,0 +1,7 @@
+{
+    "name": "Vue SPA",
+    "short_name": "Vue SPA",
+    "lang": "de-DE",
+    "start_url": "/",
+    "display": "standalone"
+}
