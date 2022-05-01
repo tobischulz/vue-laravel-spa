@@ -3,7 +3,9 @@
 </template>
 
 <script>
+import axios from 'axios'
 import router from '@/js/router'
+import store from '@/js/stores'
 
 export default {
   mounted() {
@@ -11,6 +13,7 @@ export default {
       return response;
     }, function (error) {
       if (error.response.status === 401 || error.response.status === 419) {
+        store.dispatch('logout')
         router.push({name: 'Login'})
       } else if(error.response.status === 403) {
         router.push({name: 'VerifyEmail'})
