@@ -78,8 +78,12 @@ export default {
                   this.$router.replace({name: 'Home'})
                 }
               })
+              .catch((error) => {
+                this.errors = error.response.data
+              })
           })
           .catch((error) => {
+            console.log("error", error)
             this.errors = error.response.data
           })
       });

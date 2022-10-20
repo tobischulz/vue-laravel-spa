@@ -72,6 +72,9 @@ export default {
               this.loadQrCode()
               this.loadSetupKey()
             })
+            .catch((error) => {
+              this.errors = error.response.data
+            })
         })
         .catch((error) => {
           this.errors = error.response.data
@@ -131,6 +134,9 @@ export default {
       axios.delete('/user/two-factor-authentication')
         .then((response) => {
           this.$store.dispatch('attempt_user')
+            .catch((error) => {
+              this.errors = error.response.data
+            })
         })
         .catch((error) => {
           this.errors = error.response.data

@@ -13,8 +13,9 @@ export default {
       return response;
     }, function (error) {
       if (error.response.status === 401 || error.response.status === 419) {
+        if(error.response.data.message === 'CSRF token mismatch.') return
         store.dispatch('logout')
-        router.push({name: 'Login'})
+        router.replace({name: 'Login'})
       } else if(error.response.status === 403) {
         router.push({name: 'VerifyEmail'})
       } else if(error.response.status === 423) {

@@ -10,10 +10,15 @@ window.axios.defaults.headers.common['Accept'] = 'application/json';
 window.axios.defaults.withCredentials = true;
 
 store.dispatch('attempt_user')
-  .then(() => {
+  .catch((error) => {
+    if(error.response?.status !== 401) {
+        console.error(error)
+    }
+  })
+  .finally(() => {
     const app = createApp(App)
-      .use(store)
-      .use(router);
+        .use(store)
+        .use(router);
 
     app.mount('#app');
   })

@@ -14,15 +14,18 @@ export const actions = {
             })
             .catch((error) => {
                 context.commit('updateUser', null);
-                return error
+                throw error
             })
     },
     ['logout'](context) {
         return axios.post('/logout')
             .then((response) => {
-                context.commit('logoutUser');
+                return context.commit('logoutUser');
             })
-            .catch((error) => {})
+            .catch((error) => {
+                console.error(error)
+                throw error
+            })
     },
 };
 

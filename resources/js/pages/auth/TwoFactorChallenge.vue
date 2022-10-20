@@ -47,6 +47,9 @@ export default {
             .then(() => {
               this.$router.replace({name: 'Home'})
             })
+            .catch((error) => {
+              console.error(error)
+            })
         })
         .catch((error) => {
           this.errors = error.response.data
