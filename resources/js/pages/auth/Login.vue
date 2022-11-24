@@ -64,12 +64,13 @@ export default {
   methods: {
     login() {
       this.errors = null
+
       axios.get('/sanctum/csrf-cookie').then(response => {
         axios.post('/login', this.data)
           .then((response) => {
             if(response?.status === 200 && response.data?.two_factor) {
               this.$router.replace({name: 'TwoFactorChallenge'})
-              return;
+              return
             }
 
             this.$store.dispatch('attempt_user')
@@ -83,7 +84,6 @@ export default {
               })
           })
           .catch((error) => {
-            console.log("error", error)
             this.errors = error.response.data
           })
       });
