@@ -8,9 +8,9 @@
 
 A simple and clean boilerplate to start a new SPA project with authentication and more features from fortify. Its like the little sister of Jetstream, but as SPA. This boilerplate uses the following tools:
 
-- [Laravel 9.x](https://github.com/laravel/laravel)
-- [Laravel Sanctum](https://laravel.com/docs/9.x/sanctum)
-- [Laravel Fortify](https://laravel.com/docs/9.x/fortify)
+- [Laravel 10.x](https://laravel.com/docs/10.x)
+- [Laravel Sanctum](https://laravel.com/docs/10.x/sanctum)
+- [Laravel Fortify](https://laravel.com/docs/10.x/fortify)
 - [Vue 3](https://github.com/vuejs/vue)
 - [Vue Router](https://router.vuejs.org/)
 - [Vuex](https://vuex.vuejs.org/)
