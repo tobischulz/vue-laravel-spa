@@ -45,6 +45,12 @@ APP_URL=http://laravel-vue-spa-boilerplate.test
 SESSION_DOMAIN=laravel-vue-spa-boilerplate.test
 ```
 
+Consider to support my work and say thank you with a coffee. I would very much appreciate that. 
+
+![art/bmc_qr.jpg](art/bmc_qr.jpg)
+
+[buymeacoffee.com/tobiasschulz](https://www.buymeacoffee.com/tobiasschulz)
+
 ## Screenshots
 
 A Picture Is Worth More Than A Thousand Words.
