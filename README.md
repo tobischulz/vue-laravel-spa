@@ -8,13 +8,13 @@
 
 A simple and clean boilerplate to start a new SPA project with authentication and more features from fortify. Its like the little sister of Jetstream, but as SPA. This boilerplate uses the following tools:
 
-- [Laravel 10.x](https://laravel.com/docs/10.x)
-- [Laravel Sanctum](https://laravel.com/docs/10.x/sanctum)
-- [Laravel Fortify](https://laravel.com/docs/10.x/fortify)
 - [Vue 3](https://github.com/vuejs/vue)
 - [Vue Router](https://router.vuejs.org/)
 - [Vuex](https://vuex.vuejs.org/)
 - [Tailwindcss 3.x](https://tailwindcss.com/)
+- [Laravel 10.x](https://laravel.com/docs/10.x)
+- [Laravel Sanctum](https://laravel.com/docs/10.x/sanctum)
+- [Laravel Fortify](https://laravel.com/docs/10.x/fortify)
 
 ## Features
 
@@ -28,6 +28,17 @@ The following Sanctum and Fortify features are implemented in this Vue SPA:
 - ✅ Two Factor Authentication with Confirmation
 - ✅ E-Mail Verification
 
+## Roadmap
+
+Missing something? Feel free to tell me what would be a nice addition to this boilerplate.
+
+- 🔘 Darkmode
+- 🔘 Better error handling on UI
+- 🔘 Password confirmation fixes
+- 🔘 Example page with form and api controller
+- 🔘 PWA
+- 🔘 More Tests
+
 ## Getting started
 
 Take this steps:
@@ -37,6 +48,7 @@ Take this steps:
 - run `yarn`
 - copy .env.example to .env
 - modify .env file
+- migrate database `php artisan migrate`
 
 Make sure to set those two variables to your current domain or localhost:
 
