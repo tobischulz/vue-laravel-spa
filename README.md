@@ -28,6 +28,23 @@ The following Sanctum and Fortify features are implemented in this Vue SPA:
 - ✅ Two Factor Authentication with Confirmation
 - ✅ E-Mail Verification
 
+## Getting started
+
+Take this steps:
+
+- git clone
+- run `composer install`
+- run `yarn`
+- copy .env.example to .env
+- modify .env file
+
+Make sure to set those two variables to your current domain or localhost:
+
+```
+APP_URL=http://laravel-vue-spa-boilerplate.test
+SESSION_DOMAIN=laravel-vue-spa-boilerplate.test
+```
+
 ## Screenshots
 
 A Picture Is Worth More Than A Thousand Words.
