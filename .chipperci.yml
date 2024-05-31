@@ -13,8 +13,8 @@ pipeline:
 
   - name: Compile Dev Assets
     cmd: |
-      yarn
-      yarn run dev
+      npm install
+      npm run build
 
   - name: Run Tests
     cmd: phpunit
