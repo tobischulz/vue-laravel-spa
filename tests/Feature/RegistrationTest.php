@@ -12,7 +12,7 @@ class RegistrationTest extends TestCase
 
     public function test_new_users_can_register()
     {
-        if (!in_array(Features::registration(), config('fortify.features'))) {
+        if (! in_array(Features::registration(), config('fortify.features'))) {
             $this->markTestSkipped('Skip test cause feature is disabled.');
         }
 

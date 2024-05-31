@@ -4,17 +4,18 @@
     <img src="https://app.chipperci.com/projects/6fad1690-acea-4dbd-b83c-20d34e4b8737/status/master" alt="Build Status">
 </p>
 
-## Laravel Fortify Vue SPA
+## Vue Laravel SPA
 
-A simple and clean boilerplate to start a new SPA project with authentication and more features from fortify. Its like the little sister of Jetstream, but as SPA. This boilerplate uses the following tools:
+A simple and clean starter-kit to start a new SPA project with authentication and more features from fortify. Its like Jetstream but without Inertia but with Vue-Router and Pinia as store. This starter-kit uses the following tools:
 
 - [Vue 3](https://github.com/vuejs/vue)
 - [Vue Router](https://router.vuejs.org/)
-- [Vuex](https://vuex.vuejs.org/)
+- [Pinia](https://pinia.vuejs.org/)
+- [Axios](https://axios-http.com/docs/intro)
 - [Tailwindcss 3.x](https://tailwindcss.com/)
-- [Laravel 10.x](https://laravel.com/docs/10.x)
-- [Laravel Sanctum](https://laravel.com/docs/10.x/sanctum)
-- [Laravel Fortify](https://laravel.com/docs/10.x/fortify)
+- [Laravel 11.x](https://laravel.com/docs/11.x)
+- [Laravel Sanctum](https://laravel.com/docs/11.x/sanctum)
+- [Laravel Fortify](https://laravel.com/docs/11.x/fortify)
 
 ## Features
 
@@ -36,8 +37,10 @@ Missing something? Feel free to tell me what would be a nice addition to this bo
 - 🔘 Better error handling on UI
 - 🔘 Password confirmation fixes
 - 🔘 Example page with form and api controller
+- 🔘 Laravel Pint
 - 🔘 PWA
 - 🔘 More Tests
+- 🔘 CSP
 
 ## Getting started
 
@@ -49,12 +52,14 @@ Take this steps:
 - copy .env.example to .env
 - modify .env file
 - migrate database `php artisan migrate`
+- npm install
+- npm run dev
 
 Make sure to set those two variables to your current domain or localhost:
 
 ```
-APP_URL=http://laravel-vue-spa-boilerplate.test
-SESSION_DOMAIN=laravel-vue-spa-boilerplate.test
+APP_URL=http://vue-laravel-spa.test
+SESSION_DOMAIN=vue-laravel-spa.test
 ```
 
 Consider to support my work and say thank you with a coffee. I would very much appreciate that. 

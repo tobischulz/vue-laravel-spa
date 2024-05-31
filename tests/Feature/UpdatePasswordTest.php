@@ -14,7 +14,7 @@ class UpdatePasswordTest extends TestCase
 
     public function test_password_can_be_updated()
     {
-        if (!in_array(Features::updatePasswords(), config('fortify.features'))) {
+        if (! in_array(Features::updatePasswords(), config('fortify.features'))) {
             $this->markTestSkipped('Skip test cause feature is disabled.');
         }
 
@@ -31,7 +31,7 @@ class UpdatePasswordTest extends TestCase
 
     public function test_current_password_must_be_correct()
     {
-        if (!in_array(Features::updatePasswords(), config('fortify.features'))) {
+        if (! in_array(Features::updatePasswords(), config('fortify.features'))) {
             $this->markTestSkipped('Skip test cause feature is disabled.');
         }
 
@@ -50,7 +50,7 @@ class UpdatePasswordTest extends TestCase
 
     public function test_new_passwords_must_match()
     {
-        if (!in_array(Features::updatePasswords(), config('fortify.features'))) {
+        if (! in_array(Features::updatePasswords(), config('fortify.features'))) {
             $this->markTestSkipped('Skip test cause feature is disabled.');
         }
 

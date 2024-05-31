@@ -1,18 +1,20 @@
-const colors = require('tailwindcss/colors')
+import defaultTheme from 'tailwindcss/defaultTheme';
 
-module.exports = {
-  content: [
-    "./resources/**/*.blade.php",
-    "./resources/**/*.js",
-    "./resources/**/*.vue",
-  ],
-  darkMode: 'class',
-  theme: {
-    extend: {
-      colors: {
-        gray: colors.zinc,
-      },
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        "./resources/**/*.blade.php",
+        "./resources/**/*.js",
+        "./resources/**/*.vue",
+    ],
+
+    theme: {
+        extend: {
+            fontFamily: {
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+            },
+        },
     },
-  },
-  plugins: [],
-}
+
+    plugins: [],
+};

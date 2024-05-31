@@ -13,7 +13,7 @@ class TwoFactorAuthenticationTest extends TestCase
 
     public function test_two_factor_authentication_can_be_enabled()
     {
-        if (!in_array(Features::twoFactorAuthentication(), config('fortify.features'))) {
+        if (! in_array(Features::twoFactorAuthentication(), config('fortify.features'))) {
             $this->markTestSkipped('Skip test cause feature is disabled.');
         }
 
@@ -31,7 +31,7 @@ class TwoFactorAuthenticationTest extends TestCase
 
     public function test_recovery_codes_can_be_regenerated()
     {
-        if (!in_array(Features::twoFactorAuthentication(), config('fortify.features'))) {
+        if (! in_array(Features::twoFactorAuthentication(), config('fortify.features'))) {
             $this->markTestSkipped('Skip test cause feature is disabled.');
         }
 
@@ -52,7 +52,7 @@ class TwoFactorAuthenticationTest extends TestCase
 
     public function test_two_factor_authentication_can_be_disabled()
     {
-        if (!in_array(Features::twoFactorAuthentication(), config('fortify.features'))) {
+        if (! in_array(Features::twoFactorAuthentication(), config('fortify.features'))) {
             $this->markTestSkipped('Skip test cause feature is disabled.');
         }
 
