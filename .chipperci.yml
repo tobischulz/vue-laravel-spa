@@ -10,8 +10,10 @@ pipeline:
       cp -v .env.testing .env
       composer install --no-interaction --prefer-dist --optimize-autoloader
       php artisan key:generate
+      mkdir -p database
+      touch database/database.sqlite
 
-  - name: Compile Dev Assets
+  - name: Compile Assets
     cmd: |
       npm install
       npm run build
