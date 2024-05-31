@@ -48,12 +48,13 @@ Take this steps:
 
 - git clone
 - run `composer install`
-- run `yarn`
-- copy .env.example to .env
-- modify .env file
-- migrate database `php artisan migrate`
-- npm install
+- run `npm install`
 - npm run dev
+- copy .env.example to .env
+- php artisan key:generate
+- modify .env file
+- create /database/database.sqlite file or use another database in .env
+- migrate database `php artisan migrate`
 
 Make sure to set those two variables to your current domain or localhost:
 
