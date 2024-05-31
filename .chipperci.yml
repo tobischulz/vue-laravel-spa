@@ -12,6 +12,7 @@ pipeline:
       php artisan key:generate
       mkdir -p database
       touch database/database.sqlite
+      php artisan migrate
 
   - name: Compile Assets
     cmd: |
