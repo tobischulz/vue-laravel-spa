@@ -6,7 +6,9 @@
 
 ## Vue Laravel SPA
 
-A simple and clean starter-kit to start a new SPA project with authentication and more features from fortify. Its like Jetstream but without Inertia but with Vue-Router and Pinia as store. This starter-kit uses the following tools:
+A simple and clean starter-kit to start a new SPA project. Its like Jetstream without Inertia but with Vue-Router and Pinia as store. 
+
+This starter-kit uses the following tools:
 
 - [Vue 3](https://github.com/vuejs/vue)
 - [Vue Router](https://router.vuejs.org/)
@@ -19,19 +21,19 @@ A simple and clean starter-kit to start a new SPA project with authentication an
 
 ## Features
 
-The following Sanctum and Fortify features are implemented in this Vue SPA:
+The following features are implemented in this Vue SPA:
 
-- ✅ Login
+- ✅ Authentication (Cookie based by sanctum)
 - ✅ Passwort Reset
 - ✅ Registration
 - ✅ Profile Management
 - ✅ Password Confirmation
-- ✅ Two Factor Authentication with Confirmation
+- ✅ Two Factor Authentication
 - ✅ E-Mail Verification
 
 ## Roadmap
 
-Missing something? Feel free to tell me what would be a nice addition to this boilerplate.
+Missing something? Feel free to tell me what would be a nice addition to this starter-kit.
 
 - 🔘 Darkmode
 - 🔘 Better error handling on UI
@@ -41,6 +43,7 @@ Missing something? Feel free to tell me what would be a nice addition to this bo
 - 🔘 PWA
 - 🔘 More Tests
 - 🔘 CSP
+- 🔘 Replace PHPUnit with Pest
 
 ## Getting started
 
@@ -56,11 +59,10 @@ Take this steps:
 - create /database/database.sqlite file or use another database in .env
 - migrate database `php artisan migrate`
 
-Make sure to set those two variables to your current domain or localhost:
+Make sure to set your current domain:
 
 ```
 APP_URL=http://vue-laravel-spa.test
-SESSION_DOMAIN=vue-laravel-spa.test
 ```
 
 Consider to support my work and say thank you with a coffee. I would very much appreciate that. 
@@ -85,7 +87,7 @@ A Picture Is Worth More Than A Thousand Words.
 
 ## Testing
 
-PHPunit is ready setup to test the API side of this boilerplate. Tested are all Sanctum and Fortify features cause there are heavily based on there original tests. Thats a good starting point to add tests for your next project. To run the tests you can call phpunit like this:
+PHPunit is ready setup to test the API side. Tested are all Sanctum and Fortify features cause there are heavily based on there original tests. Thats a good starting point to add tests for your next project. To run the tests you can call phpunit like this:
 
 ```bash
 php artisan test
