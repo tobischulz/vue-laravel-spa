@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import { mapActions } from 'pinia'
+import { useAuthStore } from '@/stores/auth.js'
 import Logo from '@/components/Logo.vue'
 
 export default {
@@ -40,13 +42,14 @@ export default {
     Logo,
   },
   methods: {
+    ...mapActions(useAuthStore, ['attempt_user']),
     login() {
       this.errors = null
       axios.post('/two-factor-challenge', { code: this.code, recovery_code: this.code })
         .then((response) => {
           if (response.status !== 204) return
 
-          this.$store.dispatch('attempt_user')
+          this.attempt_user()
             .then(() => {
               this.$router.replace({ name: 'Home' })
             })
