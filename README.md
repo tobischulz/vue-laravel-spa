@@ -1,5 +1,6 @@
 <p align="center">
-    <img src="https://app.chipperci.com/projects/6fad1690-acea-4dbd-b83c-20d34e4b8737/status/master" alt="Build Status">
+    <img src="https://app.chipperci.com/projects/6fad1690-acea-4dbd-b83c-20d34e4b8737/status/master" alt="Build Status ChipperCI">
+    <img src="https://github.com/tobischulz/vue-laravel-spa/actions/workflows/laravel.yml/badge.svg" alt="Build Status GitHub">
 </p>
 
 ![art/screenshot-login.png](art/screenshot-login.png)
