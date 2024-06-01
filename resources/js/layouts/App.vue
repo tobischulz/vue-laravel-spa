@@ -13,12 +13,14 @@ export default {
     ...mapActions(useAuthStore, ['logout']),
   },
   mounted() {
-    axios.interceptors.response.use(function (response) {
+    axios.interceptors.response.use((response) => {
       return response;
-    }, function (error) {
+    }, (error) => {
+      console.error(error)
       if (error.response.status === 401 || error.response.status === 419) {
         if (error.response.data.message === 'CSRF token mismatch.') return
         this.logout()
+          .catch((error) => { console.error(error) })
         router.replace({ name: 'Login' })
       } else if (error.response.status === 403) {
         router.push({ name: 'VerifyEmail' })

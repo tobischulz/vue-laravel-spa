@@ -10,7 +10,7 @@
           </label>
           <input v-model="data.email"
             class="p-2 rounded-md shadow-sm bg-white border border-gray-300 text-gray-400 block mt-1 w-full" id="email"
-            type="email" name="email" required="required" autofocus="autofocus" value="tobias@byte.software">
+            type="email" name="email" required="required" autofocus="autofocus">
         </div>
         <div class="mt-4">
           <label class="block font-medium text-sm text-gray-500" for="password">
@@ -18,8 +18,7 @@
           </label>
           <input v-model="data.password"
             class="p-2 rounded-md shadow-sm bg-white border border-gray-300 text-gray-400 focus:border-green-500 focus:ring focus:ring-green-500 focus:ring-opacity-50 block mt-1 w-full"
-            id="password" type="password" name="password" required="required" autocomplete="current-password"
-            value="password">
+            id="password" type="password" name="password" required="required" autocomplete="current-password">
         </div>
         <div v-if="errors" class="text-red-500 py-2 font-semibold">
           <span>{{ errors.message }}</span>
