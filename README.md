@@ -1,8 +1,8 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
 <p align="center">
     <img src="https://app.chipperci.com/projects/6fad1690-acea-4dbd-b83c-20d34e4b8737/status/master" alt="Build Status">
 </p>
+
+![art/screenshot-login.png](art/screenshot-login.png)
 
 ## Vue Laravel SPA
 
@@ -75,15 +75,9 @@ Consider to support my work and say thank you with a coffee. I would very much a
 
 A Picture Is Worth More Than A Thousand Words.
 
-![art/screenshot-login.jpg](art/screenshot-login.jpg)
+![art/screenshot-home.png](art/screenshot-home.png)
 
-![art/screenshot-home.jpg](art/screenshot-home.jpg)
-
-![art/screenshot-user-settings.jpg](art/screenshot-user-settings.jpg)
-
-![art/screenshot-2fa-activation.jpg](art/screenshot-2fa-activation.jpg)
-
-![art/screenshot-confirm-password.jpg](art/screenshot-confirm-password.jpg)
+![art/screenshot-settings.png](art/screenshot-settings.png)
 
 ## Testing
 
