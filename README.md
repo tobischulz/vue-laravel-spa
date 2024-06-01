@@ -50,19 +50,13 @@ Missing something? Feel free to tell me what would be a nice addition to this st
 
 You can quick start with this starter-kit by running the **`bin/install.sh`** script or manually run the containing commands. 
 
-After that you can loggin with `text@example.com` and the password `password`
+After that you can login with `text@example.com` and the password `password`
 
 Make sure to set your current domain in the .env file:
 
 ```
 APP_URL=http://vue-laravel-spa.test
 ```
-
-Consider to support my work and say thank you with a coffee. I would very much appreciate that. 
-
-![art/bmc_qr.jpg](art/bmc_qr.jpg)
-
-[buymeacoffee.com/tobiasschulz](https://www.buymeacoffee.com/tobiasschulz)
 
 ## Screenshots
 
@@ -71,6 +65,12 @@ A Picture Is Worth More Than A Thousand Words.
 ![art/screenshot-home.png](art/screenshot-home.png)
 
 ![art/screenshot-settings.png](art/screenshot-settings.png)
+
+Consider to support my work and say thank you with a coffee. I would very much appreciate that. 
+
+![art/bmc_qr.jpg](art/bmc_qr.jpg)
+
+[buymeacoffee.com/tobiasschulz](https://www.buymeacoffee.com/tobiasschulz)
 
 ## Testing
 
