@@ -50,7 +50,7 @@ Missing something? Feel free to tell me what would be a nice addition to this st
 
 You can quick start with this starter-kit by running the **`bin/install.sh`** script or manually run the containing commands. 
 
-After that you can login with `text@example.com` and the password `password`
+After that you can login with `test@example.com` and the password `password`
 
 Make sure to set your current domain in the .env file:
 
