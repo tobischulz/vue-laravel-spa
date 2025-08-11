@@ -16,9 +16,9 @@ This starter-kit uses the following tools:
 - [Pinia](https://pinia.vuejs.org/)
 - [Axios](https://axios-http.com/docs/intro)
 - [Tailwindcss 3.x](https://tailwindcss.com/)
-- [Laravel 11.x](https://laravel.com/docs/11.x)
-- [Laravel Sanctum](https://laravel.com/docs/11.x/sanctum)
-- [Laravel Fortify](https://laravel.com/docs/11.x/fortify)
+- [Laravel 12.x](https://laravel.com/docs/12.x)
+- [Laravel Sanctum](https://laravel.com/docs/12.x/sanctum)
+- [Laravel Fortify](https://laravel.com/docs/12.x/fortify)
 
 ## Features
 
