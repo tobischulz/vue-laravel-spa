@@ -28,6 +28,9 @@ export const useAuthStore = defineStore('auth', {
           console.error(error)
           throw error
         })
+        .finally(() => {
+          this.$reset()
+        })
     },
   },
   getters: {
